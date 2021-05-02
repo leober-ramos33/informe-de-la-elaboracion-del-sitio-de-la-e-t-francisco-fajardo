@@ -1,0 +1,24 @@
+{
+    "name": "informe-de-la-elaboracion-del-sitio-de-la-e-t-francisco-fajardo",
+    "version": "1.0.0",
+    "description": "Informe de la elaboración del sitio de la E.T. \"Francisco Fajardo\"",
+    "private": true,
+    "scripts": {
+        "format": "prettier --write .",
+        "build": "parcel build public/index.html --dist-dir dist --detailed-report 0 --no-source-maps --public-url \"./\"",
+        "dev": "parcel serve public/index.html --dist-dir dist"
+    },
+    "keywords": [
+        "informe",
+        "website"
+    ],
+    "author": "Leober Ramos <leober.ramos33@gmail.com> (https://github.com/yonaikerlol)",
+    "license": "MIT",
+    "devDependencies": {
+        "@parcel/packager-raw-url": "^2.0.0-beta.2",
+        "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
+        "parcel": "^2.0.0-beta.2",
+        "prettier": "^2.2.1",
+        "tailwindcss": "^2.0.4"
+    }
+}
