@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta
             http-equiv="Content-Security-Policy"
-            content="style-src 'self'; img-src 'self'; manifest-src 'self'"
+            content="script-src 'self'; style-src 'self'; img-src 'self'; manifest-src 'self'"
         />
 
         <!-- Robots tags -->
@@ -98,9 +98,7 @@
         <div class="relative pt-6 px-4 pb-4 sm:px-6 lg:px-8 bg-gray-100">
             <div class="flex items-center justify-between">
                 <div class="flex items-center flex-shrink-0">
-                    <div
-                        class="flex items-center justify-center w-full md:w-auto"
-                    >
+                    <div class="flex items-center justify-center w-auto">
                         <a href="about-me.html">
                             <img
                                 class="rounded-full ring-2 ring-white shadow-sm h-16 w-16"
@@ -112,9 +110,32 @@
 
                     <a
                         href="about-me.html"
-                        class="block sm:ml-2 md:ml-4 pr-4 font-medium text-gray-500 hover:text-gray-900"
+                        class="hidden md:block ml-4 pr-4 text-lg font-medium text-gray-500 hover:text-gray-900"
                     >
                         Leober Ramos
+
+                        <div class="flex items-center justify-around">
+                            <img
+                                src="img/social/twitter.svg"
+                                class="w-5 h-auto"
+                                alt="Twitter"
+                            />
+                            <img
+                                src="img/social/correo.svg"
+                                class="w-5 h-auto"
+                                alt="Correo"
+                            />
+                            <img
+                                src="img/social/github.svg"
+                                class="w-5 h-auto"
+                                alt="GitHub"
+                            />
+                            <img
+                                src="img/social/blog.svg"
+                                class="w-5 h-auto"
+                                alt="Blog"
+                            />
+                        </div>
                     </a>
                 </div>
 
@@ -473,6 +494,2575 @@
                     una persona real.
                 </p>
 
+                <br />
+                <br />
+
+                <p>
+                    Si quieres saber más a detalle todos los pasos que realize
+                    para desarrollar el proyecto puedes verlo aquí:
+                </p>
+
+                <div class="mt-5 sm:mt-8 mb-5 flex justify-center items-center">
+                    <div class="mt-3 sm:mt-0">
+                        <button
+                            id="steps-btn"
+                            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10 transition shadow hover:shadow-xl text-center focus:outline-none"
+                        >
+                            <span class="inline-block" id="steps-btn-view">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 inline-block"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                    />
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                    />
+                                </svg>
+                                Ver Detalles
+                            </span>
+
+                            <span class="hidden" id="steps-btn-close">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 inline-block"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                </svg>
+                                Cerrar Detalles
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hidden" id="steps-content">
+                    <div class="flex flex-col">
+                        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                            <div
+                                class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+                            >
+                                <div
+                                    class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+                                >
+                                    <table
+                                        class="min-w-full divide-y divide-gray-200"
+                                    >
+                                        <thead class="bg-gray-50">
+                                            <tr>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                >
+                                                    Fecha
+                                                </th>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                >
+                                                    Cambios
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200"
+                                        >
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-13
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        00:23:29
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/b5ed0ea"
+                                                        target="_blank"
+                                                    >
+                                                        Instalación y desarrollo
+                                                        inicial
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-13
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        13:36:21
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/5fa4ad4"
+                                                        target="_blank"
+                                                    >
+                                                        <ul
+                                                            class="list-disc list-outside md:list-inside"
+                                                        >
+                                                            <li>
+                                                                Agregado
+                                                                <em
+                                                                    >middleware</em
+                                                                >
+                                                                HTTP de
+                                                                administradores,
+                                                                agregada página.
+                                                            </li>
+                                                            <li>
+                                                                Agregada
+                                                                plantilla de
+                                                                errores HTTP,
+                                                                página de error
+                                                                HTTP 401 (no
+                                                                autorizado) y
+                                                                página de error
+                                                                HTTP 404 (no
+                                                                encontrado).
+                                                            </li>
+                                                            <li>
+                                                                Agregado panel
+                                                                de control.
+                                                            </li>
+                                                            <li>
+                                                                CRUD de las
+                                                                actividades
+                                                                (Incompleto).
+                                                            </li>
+                                                            <li>
+                                                                CRUD de los
+                                                                usuarios
+                                                                (Incompleto).
+                                                            </li>
+                                                            <li>
+                                                                CRUD de los
+                                                                cursos
+                                                                (Incompleto).
+                                                            </li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-14
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:09:27
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/fd7fa72"
+                                                        target="_blank"
+                                                    >
+                                                        <ul
+                                                            class="list-disc list-outside md:list-inside"
+                                                        >
+                                                            <li>
+                                                                Finalización del
+                                                                CRUD de las
+                                                                actividades.
+                                                            </li>
+                                                            <li>
+                                                                Utilizar
+                                                                MaterializeCSS
+                                                                desde una CDN en
+                                                                vez de una copia
+                                                                local.
+                                                            </li>
+                                                            <li>
+                                                                Añadida
+                                                                renderizado por
+                                                                defecto del
+                                                                navegador en el
+                                                                contenido de la
+                                                                actividad.
+                                                            </li>
+                                                            <li>
+                                                                Manejo de
+                                                                errores en el
+                                                                inicio de sesión.
+                                                            </li>
+                                                            <li>
+                                                                Definir el color
+                                                                de la barra de
+                                                                navegación y del
+                                                                footer
+                                                                utilizando
+                                                                clases de CSS de
+                                                                MaterializeCSS
+                                                                en vez de usar
+                                                                colores
+                                                                <em>HEX</em>
+                                                                directamente en
+                                                                CSS.
+                                                            </li>
+                                                            <li>
+                                                                CRUD de los
+                                                                usuarios
+                                                                (Incompleto).
+                                                            </li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-15
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        22:19:45
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/1ebfd02"
+                                                        target="_blank"
+                                                    >
+                                                        <ul
+                                                            class="list-disc list-outside md:list-inside"
+                                                        >
+                                                            <li>
+                                                                Añadida
+                                                                plantilla del
+                                                                archivo
+                                                                <em>.env</em>
+                                                                por defecto.
+                                                            </li>
+                                                            <li>
+                                                                Finalización del
+                                                                CRUD de los
+                                                                cursos.
+                                                            </li>
+                                                            <li>
+                                                                Finalización del
+                                                                CRUD de los
+                                                                usuarios.
+                                                            </li>
+                                                            <li>
+                                                                Añadido página
+                                                                de error HTTP
+                                                                419 (expiración
+                                                                de token CSRF).
+                                                            </li>
+                                                            <li>
+                                                                Se tiene que
+                                                                usar metodos
+                                                                POST en vez de
+                                                                PUT o DELETE
+                                                                para subir
+                                                                información por
+                                                                que no funciona
+                                                                otro metodo.
+                                                            </li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-16
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        01:25:18
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/5c48c52"
+                                                        target="_blank"
+                                                    >
+                                                        Eliminado
+                                                        <em>Normalize.css</em>
+                                                        por que ofrece una carga
+                                                        más y con MaterializeCSS
+                                                        ya se ve bien en
+                                                        cualquier navegador.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-16
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        16:09:26
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/7bb59ea"
+                                                        target="_blank"
+                                                    >
+                                                        Eliminada la copia local de CKEDitor y la carga ahora va a ser por una CDN.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-16
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        16:10:29
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/39ce54a"
+                                                        target="_blank"
+                                                    >
+                                                        Eliminada la carga de la libreria <em>Chart.js</em> que era para visualizar los gráficos que se introduzcan en las actividades, por que no se esta utilizando.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-16
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        17:33:54
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/6a09bf8"
+                                                        target="_blank"
+                                                    >
+                                                        Corregido boton de eliminar usuario.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-16
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        17:35:42
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/3960719"
+                                                        target="_blank"
+                                                    >
+                                                        Producción como entorno por defecto en la plantilla del archivo <em>.env</em>.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-16
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:11:06
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/a0682eb"
+                                                        target="_blank"
+                                                    >
+                                                        Corregido cuando se intenta añadir un nuevo usuario con privilegios de administrador.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-18
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        17:47:12
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/6f39e20"
+                                                        target="_blank"
+                                                    >
+                                                        Los cursos ahora se muestran ordenados por año y mención.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-18
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        17:51:49
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/16692b4"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha añadido por defecto los departamentos de Idiomas, Educación Física y Biología.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-19
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:14:27
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/923f477"
+                                                        target="_blank"
+                                                    >
+                                                        <ul class="list-disc list-outside md:list-inside">
+                                                            <li>Añadido botón para descargar una actividad en PDF.</li>
+                                                            <li>CRUD de los departamentos.</li>
+                                                            <li>Corregido algunos errores en el manejo de excepciones de la página de iniciar sesión</li>
+                                                            <li>Corregido algunos errores al crear y editar alguna actividad</li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-19
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:14:58
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/a4f3acf"
+                                                        target="_blank"
+                                                    >
+                                                        <ul class="list-disc list-outside md:list-inside">
+                                                            <li>Corregido botón para descargar una actividad en PDF.</li>
+                                                            <li>Corregido CRUD de los departamentos.</li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-19
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        16:04:14
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/787e25c"
+                                                        target="_blank"
+                                                    >
+                                                        Eliminar el <em>wrapper</em> Laravel-DomPDF y utilizar la librería DomPDF en vez.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-19
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        16:05:28
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/9ccf04c"
+                                                        target="_blank"
+                                                    >
+                                                        Utilizar JavaScript en su versión ES5 en la inserción de CKEditor en vez de JavaScript ES6. Para mayor compatibilidad.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-19
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        16:37:15
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/1c89d29"
+                                                        target="_blank"
+                                                    >
+                                                        Cuando se descarga un PDF se debe de descargar con el siguiente formato: "[Año] [Mención] [Sección] - [Asignatura] ([Profesor])".
+
+                                                        <span class="text-sm text-gray-500">Ej. 1ro Turismo U - Matemáticas (Jesús Chacón).pdf</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-20
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        21:31:32
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/ed07a1f"
+                                                        target="_blank"
+                                                    >
+                                                        Alojada copia local de CKEditor, ya no se cargara por una CDN.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-20
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        21:49:41
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/fe5df0f"
+                                                        target="_blank"
+                                                    >
+                                                        <ul class="list-disc list-outside md:list-inside">
+                                                            <li>Ya no se utilizara estilos en la visualización de una actividad, se vera tal cual como el PDF; una página en blanco con el contenido.</li>
+                                                            <li>Añadido <em>Normalize.css</em> a esta nueva página para que se vea correctamente la actividad en una página sin estilos</li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-20
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        23:56:58
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/26dddd2"
+                                                        target="_blank"
+                                                    >
+                                                        Se removio la vista que se habia puesto en el ultimo cambio y se dejo la que tenia antes.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-21
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        00:01:32
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/e25a56e"
+                                                        target="_blank"
+                                                    >
+                                                        Corregido titulo cuando visualizas una actividad. No se puede interpolar variables de esa forma con Laravel.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-10-21
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        00:20:00
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/bc5cfb8"
+                                                        target="_blank"
+                                                    >
+                                                        Cuando ponias un vídeo de YouTube o cualquier otra cosa embebida en el editor de la actividad esta no se veia correctamente cuando tratabas de ver la actividad al final, ya se corrigio eso.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-11-05
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        13:40:18
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/fe0188c"
+                                                        target="_blank"
+                                                    >
+                                                        Corregida descarga de la actividad como PDF en dispostivos móviles.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-01
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:13:25
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/8c1e9fa"
+                                                        target="_blank"
+                                                    >
+                                                        Instalación de ImgBot para optimizar el peso de las imágenes.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-01
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:18:46
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/ca41f32"
+                                                        target="_blank"
+                                                    >
+                                                        Optimización de imágenes por parte de ImgBot.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-03
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        00:25:07
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/f5c7c24"
+                                                        target="_blank"
+                                                    >
+                                                        Instalación de Dependabot para mantener las dependencias actualizadas.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-03
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        00:38:21
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/6466b5f"
+                                                        target="_blank"
+                                                    >
+                                                        Instalación de Prettier y Continuous Integration.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-03
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        00:45:44
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/2c99703"
+                                                        target="_blank"
+                                                    >
+                                                        Instalado plugin de PHP para Prettier.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-03
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        01:06:27
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/cea8544"
+                                                        target="_blank"
+                                                    >
+                                                        Instalación de  Continuous Deployment.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-03
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        01:10:44
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/2ebad3e"
+                                                        target="_blank"
+                                                    >
+                                                        Removido paso de generar una nueva llave de cifrado para Laravel en el Continuous Deployment.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-03
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        01:21:21
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/d3caac0"
+                                                        target="_blank"
+                                                    >
+                                                        Removido todos los pasos relacionados a PHP en el Continuous Deployment. Solamente se compila los assets con Node.js y se sube al servidor.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-03
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        02:11:49
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/e2038b2"
+                                                        target="_blank"
+                                                    >
+                                                        Cambiado de licencia. De MIT a la licencia de Apache.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-03
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:51:12
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/fd3aef8"
+                                                        target="_blank"
+                                                    >
+                                                        Instalación de PHP-CS-Fixer, y añadido paso para formatear código con esto en el Continuous Integration.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-05
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:24:37
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/1cc2ec9"
+                                                        target="_blank"
+                                                    >
+                                                        Agregado paso para
+                                                        limpiar el cache de
+                                                        Cloudflare en el
+                                                        Continuous Deployment.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-07
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        13:00:02
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/9d9fd8e"
+                                                        target="_blank"
+                                                    >
+                                                        Instalación de Autoprefixer.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-07
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        13:04:33
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/8fcd60d"
+                                                        target="_blank"
+                                                    >
+                                                        Ignorar las carpetas de
+                                                        los assets estáticos por
+                                                        defecto para que
+                                                        Prettier no las
+                                                        formatee.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-20
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        16:43:51
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/0171994"
+                                                        target="_blank"
+                                                    >
+                                                        <ul class="list-disc list-outside md:list-inside">
+                                                            <li>Mediante los metadatos del sitio indicar a los Robots (tales como Google o Bing) que no indexen la página con lo cual no aparecera en los resultados de estos buscadores.</li>
+                                                            <li>Actualizado el eslogan en el footer.</li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-20
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        17:43:15
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/59177fa"
+                                                        target="_blank"
+                                                    >
+                                                        Removidas bastantes variables de entorno por defecto que este proyecto no usa.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-20
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        17:43:37
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/d76f2d0"
+                                                        target="_blank"
+                                                    >
+                                                        Añadida generación automática de URL "canonical" para SEO.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2020-12-20
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:00:34
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/f667cde"
+                                                        target="_blank"
+                                                    >
+                                                        Actualizado el nombre de los GitHub Secrets para un nombre más semántico en el Continuous Deployment.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-05
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        17:53:32
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/8b270be"
+                                                        target="_blank"
+                                                    >
+                                                        Nuevo año, actualizado
+                                                        en la licencia del
+                                                        código.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-05
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:09:26
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/d2a2672"
+                                                        target="_blank"
+                                                    >
+                                                        Nuevo año, actualizado
+                                                        en el footer.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-10
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        12:22:22
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/ac75e43"
+                                                        target="_blank"
+                                                    >
+                                                        Eliminado el campo
+                                                        Disallow en el archivo
+                                                        robots.txt, por qué en
+                                                        el servidor este esta en
+                                                        un subdirectorio.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-10
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        12:22:34
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/aa45e6f"
+                                                        target="_blank"
+                                                    >
+                                                        Cambiado el nombre del
+                                                        archivo del Web App
+                                                        Manifest, de
+                                                        "manifest.webmanifest" a
+                                                        "site.webmanifest".
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-10
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        12:34:58
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/b5f5a62"
+                                                        target="_blank"
+                                                    >
+                                                        HTML5Shiv y Respond.js
+                                                        se cargan
+                                                        automaticamente cuando
+                                                        se detecta una versión
+                                                        inferior a IE9, se ha
+                                                        eliminado los atributos
+                                                        en esa carga que no
+                                                        funcionan en esas
+                                                        versiones.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-13
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        15:21:45
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/871a274"
+                                                        target="_blank"
+                                                    >
+                                                        Cuando abres el sistema ya no te hace una redirección a "/courses" si no que por defecto esta es la ruta que se utiliza.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-13
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:53:35
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/e36f41e"
+                                                        target="_blank"
+                                                    >
+                                                        Se regresa a la licencia original del código, la licencia MIT.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-15
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:43:06
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/c473f13"
+                                                        target="_blank"
+                                                    >
+                                                        Añadida una política de
+                                                        <strong>CSP</strong>
+                                                        (Content-Security-Policy)
+                                                        para el sistema.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-26
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        13:00:05
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/060a252"
+                                                        target="_blank"
+                                                    >
+                                                        Eliminada la política de CSP. Por que no cargan los videos de YouTube o otros embebidos en las actividades.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-27
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:11:38
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/7389b60"
+                                                        target="_blank"
+                                                    >
+                                                        Desinstalación de PHP-CS-Fixer.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-01-28
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        22:18:40
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/a3a3493"
+                                                        target="_blank"
+                                                    >
+                                                        Actualizado el eslogan del sitio.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-02-02
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:18:21
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/b7bf740"
+                                                        target="_blank"
+                                                    >
+                                                        Agregada una nueva GitHub Action para mantener actualizada las dependencias de Composer en el servidor.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-02-05
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:23:56
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/9ff03ce"
+                                                        target="_blank"
+                                                    >
+                                                        Todas las imágenes deben
+                                                        de tener un atributo
+                                                        alt, agregado a la
+                                                        imagen de "Contra el
+                                                        COVID-19".
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-02-07
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        20:50:41
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/f622a05"
+                                                        target="_blank"
+                                                    >
+                                                        Invalido <em>&lt;thead&gt;</em> de la tabla en la vista de una actividad, debe de tener un <em>&lt;tr&gt;</em>.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-02-10
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        17:45:28
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/2d8b13a"
+                                                        target="_blank"
+                                                    >
+                                                        Añadido <em>dns-prefetch</em> del dominio fonts.gstatic.com para que la fuente de los iconos cargue más rapido al resolver la dirección DNS antes.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-01
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        16:51:30
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/994cff8"
+                                                        target="_blank"
+                                                    >
+                                                        Removido el Continuous Update que mantenia actualizadas las dependencias de Composer en el servidor por que no funciona debido a que son muchos archivos que debe de subir.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-21
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        12:16:18
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/c78472d"
+                                                        target="_blank"
+                                                    >
+                                                        Agregado archivo <em>.gitattributes</em> para un mejor trabajo con Git.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:33:20
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/464bd61"
+                                                        target="_blank"
+                                                    >
+                                                        Ahora los archivos YML tienen dos espacios de identación en vez de 4. Y ahora el final de linea de todos los archivos va a ser de UNIX (LF).
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:33:53
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/5ab5671"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha añadido archivos para ignorar por Git de Laravel, Composer y Node.js.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:34:54
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/3c6ef06"
+                                                        target="_blank"
+                                                    >
+                                                        El archivo <em>webpack.mix.js</em> y los archivos del directorio <em>storage</em> ahora son ignorados por Prettier.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:36:50
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/880eb27"
+                                                        target="_blank"
+                                                    >
+                                                        Por defecto, en caso de algún error el lenguaje por defecto de Laravel sera el inglés.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:37:27
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/9da153d"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha removido el <em>EventServiceProvider</em> de Laravel por que este proyecto no usa eventos.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:53:52
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/4ee1e01"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha actualizado el nombre del archivo del cache en la configuración de Laravel.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:55:05
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/cae8914"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha actualizado la configuración por defecto de la base de datos.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:56:33
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/96d26ee"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha actualizado la configuración por defecto del correo.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:57:27
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/1f9fd91"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha actualizado la configuración por defecto de las sesiones.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:58:04
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/21446c2"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha removido los "factories" de la base de datos por que este proyecto no tiene <em>Unit Tests</em>.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        18:59:58
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/edd8ed9"
+                                                        target="_blank"
+                                                    >
+                                                        Ahora el comportamiento del <em>Web App Manifest</em> es tal como el de una PWA.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:06:20
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/b020be3"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha movido el directorio de los fragmentos de código de las vistas, de "parcials" a "layouts/partials".
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:06:51
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/4f38fd7"
+                                                        target="_blank"
+                                                    >
+                                                        <ul class="list-disc list-outside md:list-inside">
+                                                            <li>Se ha eliminado el CSRF token en el <em>&lt;head&gt;</em>, solo se usa en formularios, no en todas las páginas.</li>
+                                                            <li>Se ha movido la lógica de la insersión del CKEDitor a un archivo de JavaScript aparte.</li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:09:03
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/970a371"
+                                                        target="_blank"
+                                                    >
+                                                        <ul class="list-disc list-outside md:list-inside">
+                                                            <li>Se ha añadido el archivo de la inserción del CKEDitor para compilarse con Laravel Mix.</li>
+                                                            <li>Se ha corregido la generación de los prefijos de los navegadores con Autoprefixer.</li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:11:43
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/a91b3e4"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha cambiado el nombre del middlware HTTP de verificación de si eres un administrador o no, de "IsAdmin" a "UserIsAdmin" por que es más descriptivo.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:18:04
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/650d805"
+                                                        target="_blank"
+                                                    >
+                                                        Antes se ignoraba los assets estáticos compilados por Git, ya se ha corregido eso.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:22:35
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/e668824"
+                                                        target="_blank"
+                                                    >
+                                                        Ahora las imágenes se adaptan a cualquier tamaño de pantalla gracias a CSS.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:28:24
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/7c31646"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha solucionado un error en la plantilla de las páginas de los errores HTTP en donde el titulo que pusieras en las páginas que usaran esta plantilla no se iban a colocar por que ya estaba un titulo en la plantilla.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:30:38
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/553f0a4"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha removido el "Recuerdame" de la página de inicio de sesión, por que no se usa el "remember_token".
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:44:23
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/7ce1f87"
+                                                        target="_blank"
+                                                    >
+                                                        <ul class="list-disc list-outside md:list-inside">
+                                                            <li>Agregado soporte a más navegadores actualizando la lista <em>Browserlist</em></li>
+                                                                <li>
+                                                                    Agregado
+                                                                    fondo con patron de
+                                                                    diseño.
+                                                                </li>
+                                                                <li>
+                                                                    Sombra
+                                                                    cuando pasas
+                                                                    el mouse por el contenido principal.
+                                                                </li>
+                                                                <li>
+                                                                    Contenedor
+                                                                    blanco y
+                                                                    redondeado en el contenido principal.
+                                                                </li>
+                                                        </ul>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:46:16
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/af43df4"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha cambiado el fondo con patrón de diseño.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        19:47:02
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/c977d46"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha eliminado el redondeado de los botones.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        20:09:39
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/8b27b7c"
+                                                        target="_blank"
+                                                    >
+                                                        Ahora Prettier ignora los archivos en el directorio "routes" por que este malforma las rutas.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-22
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        20:12:11
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/c82660e"
+                                                        target="_blank"
+                                                    >
+                                                        Ahora las rutas del sistema estan en español.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-24
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        13:07:10
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/8ed1935"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha añadido un archivo README para que se describa el proyecto en GitHub.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-24
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:12:38
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/72a6286"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha cambiado el fondo con patrón de diseño a uno de "X".
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap"
+                                                >
+                                                    <div
+                                                        class="text-sm text-gray-900"
+                                                    >
+                                                        2021-03-24
+                                                    </div>
+                                                    <div
+                                                        class="text-sm text-gray-500"
+                                                    >
+                                                        14:12:38
+                                                    </div>
+                                                </td>
+
+                                                <td
+                                                    class="px-6 py-4 whitespace-wrap text-center md:text-justify"
+                                                >
+                                                    <a
+                                                        href="https://github.com/francisco-fajardo/actividades/commit/428e3b8"
+                                                        target="_blank"
+                                                    >
+                                                        Se ha actualizado Laravel Mix a su versión 6.
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div
                     class="mt-5 sm:mt-8 mb-5 flex flex-wrap md:flex-nowrap justify-center items-center"
                 >
@@ -482,6 +3072,21 @@
                             title="Sistema Web NF"
                             class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition shadow hover:shadow-xl text-center"
                         >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 mr-2 md:mr-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                                />
+                            </svg>
+
                             Siguiente página
                         </a>
                     </div>
@@ -492,11 +3097,28 @@
                             target="_blank"
                             class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10 transition shadow hover:shadow-xl text-center"
                         >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 mr-2 md:mr-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                                />
+                            </svg>
+
                             Código del Sistema Web NF
                         </a>
                     </div>
                 </div>
             </div>
         </main>
+
+        <script src="js/changelog.js"></script>
     </body>
 </html>
